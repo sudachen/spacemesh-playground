@@ -21,7 +21,7 @@ const bootstratGrpcPort = 19190
 const poetPort = 10080
 const poetRpcPort = 10082
 const eventsPort = 10083
-const TestNetPath = "./local-testnet/"
+const TestNetPath = "./"
 const BinPath = TestNetPath +".bin/"
 
 const genesisCoinbase = "0x0000000000000000000000000000000000000000000000000000000000000001"
@@ -29,9 +29,11 @@ const genesisCoinbase = "0x00000000000000000000000000000000000000000000000000000
 var genesisAccounts = []string{
 	/*Almog*/  "0x4d05cfede9928bcd225c008db8110cfeb1f01011e118bdb93f1bb14d2052c276",
 	/*Anton*/  "0xdb58184012f26c405bff2d8866bf7ef2d1da7f0b391d1f1364f1d695929df617",
-	/*Tap*/    "0x891da146767aa80e3ce3ef826ef675c1bb32e9021844193a163fac231513149a",
 	/*Yosher*/ "0x39a27e846f7e9783cd8fcae0f94abe7ba1428df096e13e903ef5b9df85d520e1",
 	/*Gavrad*/ "0x0dc90fe42d96e302ae122aa3437e320d792772aba8f459f80e18a45ae754112d",
+
+	//does not mine
+	////*Tap*/    "0x891da146767aa80e3ce3ef826ef675c1bb32e9021844193a163fac231513149a",
 }
 
 var globalOpts = map[string]interface{} {

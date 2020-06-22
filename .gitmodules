@@ -1,0 +1,6 @@
+[submodule "go-spacemesh"]
+	path = go-spacemesh
+	url = git@github.com:sudachen/go-spacemesh
+[submodule "poet"]
+	path = poet
+	url = https://github.com/sudachen/poet

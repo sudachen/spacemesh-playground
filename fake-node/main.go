@@ -4,20 +4,14 @@ import (
 	"fmt"
 	"github.com/spacemeshos/go-spacemesh/log"
 	"github.com/spf13/cobra"
-	"github.com/sudachen/spacemesh-playground/errstr"
+	"github.com/sudachen/spacemesh-playground/fake-node/fake"
 	"github.com/sudachen/spacemesh-playground/local-testnet/testnet"
 	"os"
 	"runtime"
 )
 
-
-const MajorVersion = 1
-const MinorVersion = 0
-
-const FirstPoetPort = 18550
-const FirstNodeREST = 19090
-const FirstNodeRPC = 19190
-const DataPath = "./local-testnet-data"
+const RestPort = 19190
+const DataPath = "./fake-node"
 
 func init() {
 	log.DebugMode(true)
@@ -32,7 +26,7 @@ func main() {
 		SilenceErrors: true,
 		Run: func (cmd *cobra.Command, args []string) {
 			log.Debug("test")
-			testnet.Start(4,5,1000, DataPath, FirstPoetPort, FirstNodeREST, FirstNodeRPC)
+			fake.Start(DataPath, RestPort)
 		},
 	}
 
@@ -52,3 +46,4 @@ func main() {
 		panic(errstr.Frame(0, err))
 	}
 }
+
